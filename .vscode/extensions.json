@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "streetsidesoftware.code-spell-checker",
+        "ms-toolsai.jupyter-keymap",
+        "ms-python.vscode-pylance",
+        "himanoa.python-autopep8",
+        "eamodio.gitlens"
+    ]
+}
