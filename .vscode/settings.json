@@ -110,4 +110,5 @@
         "Orange"
     ],
     "jupyter.jupyterServerType": "local",
+    "gitlens.views.stashes.files.layout": "tree",
 }
