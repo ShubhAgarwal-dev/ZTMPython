@@ -1,4 +1,6 @@
-# Complete Python Developer in 2020: Zero to Mastery
+
+# message from author I have some of my notes from
+## Complete Python Developer in 2020: Zero to Mastery
 
 This repository contains all the codes and notes, which I prepared when I was pursuing this [course](https://www.udemy.com/share/101URkAkIZdlpbR3w=/) by [@aneagoie](https://github.com/aneagoie).
 
@@ -11,3 +13,4 @@ You can support me here (This is completely optional. Please do not feel obligat
 For USDT/BUSD/USDC/ETH/BNB (ERC20(ETH) and BEP20(BSC) address): 0xCD18f8560d62A860401b88d0E2cdF5742eA85a05
 
 Thank You and Keep learning :)
+
