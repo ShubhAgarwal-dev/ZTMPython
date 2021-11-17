@@ -111,4 +111,8 @@
     ],
     "jupyter.jupyterServerType": "local",
     "gitlens.views.stashes.files.layout": "tree",
+    "cSpell.ignoreWords": [
+        "gmail",
+        "shubhagarwa"
+    ],
 }
