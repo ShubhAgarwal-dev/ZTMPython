@@ -7,7 +7,17 @@ class TestMain(unittest.TestCase):
         test_param = 10
         result = main.add_5(test_param)
         # * Most Important Line of test is below
-        self.assertEquals(result, 15)
+        self.assertEqual(result, 15)
+
+    def test_add_5_2(self):
+        test_param = "djf"
+        result = main.add_5(test_param)
+        # * Most Important Line of test is below
+        self.assertTrue(isinstance(result, ValueError))
 
 
-unittest.main()
+# unittest.main()
+
+'''
+While testing you want to break things and then fix them
+'''
