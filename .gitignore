@@ -1,2 +1,3 @@
 *.pdf
-*.pyc
+**/*.pyc
+**/*__pycache__
