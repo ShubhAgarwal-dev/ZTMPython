@@ -1,5 +1,10 @@
-def add_5(num):
+def add_5(num=0):
     try:
-        return int(num) + 5
+        if num:
+            return int(num) + 5
+        else:
+            return 'Please Enter Number'
     except ValueError as err:
+        return err
+    except TypeError as err:
         return err

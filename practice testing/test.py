@@ -12,12 +12,22 @@ class TestMain(unittest.TestCase):
     def test_add_5_2(self):
         test_param = "djf"
         result = main.add_5(test_param)
-        # * Most Important Line of test is below
         self.assertTrue(isinstance(result, ValueError))
 
+    def test_add_5_3(self):
+        test_param = ["5.0"]
+        result = main.add_5(test_param)
+        self.assertIsInstance(result, TypeError)
 
-# unittest.main()
+    def test_add_5_4(self):
+        test_param = None
+        result = main.add_5(test_param)
+        self.assertEqual(result, 'Please Enter Number')
 
-'''
-While testing you want to break things and then fix them
-'''
+
+if '__name__' == '__main__':
+    unittest.main()
+
+
+# ->While testing you want to break things and then fix them until it becomes perfect
+# -> Tests do not go into production code so please make them very descriptive
