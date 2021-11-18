@@ -8,7 +8,7 @@ class TestMain(unittest.TestCase):
         test_param = 10
         result = main.add_5(test_param)
         # * Most Important Line of test is below
-        self.assertEquals(15)
+        self.assertEquals(result, 15)
 
 
 unittest.main()
