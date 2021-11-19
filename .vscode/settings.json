@@ -92,7 +92,7 @@
             "italic": false
         },
         {
-            "tag": "NO",
+            "tag": "NO:",
             "color": "#FF4500",
             "strikethrough": true,
             "underline": false,
