@@ -41,7 +41,7 @@ def js_route(file):
 
 @app.route('/bat/<file>')
 def bat_route(file):
-    out = sp.run("php", "%s", stdout=sp.PIPE) % file
+    out = sp.run("php", "templates/bat/%s", stdout=sp.PIPE) % file
     return out.stdout
 
 
