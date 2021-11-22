@@ -1,14 +1,15 @@
-from flask import Flask, render_template, send_file, redirect, url_for
+from flask import Flask, render_template, send_file
+import subprocess as sp
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
+@app.route('/user/<user>')
+def hello_world(user: str = None):
     '''
     Flask automatically converts it to html for us to render it on browser.
     '''
-    return 'Hello World!'
+    return 'Hello World!\nHi %s' % user
 
 
 @app.route('/blog')
@@ -40,7 +41,8 @@ def js_route(file):
 
 @app.route('/bat/<file>')
 def bat_route(file):
-    return render_template('bat/%s' % file)
+    out = sp.run("php", "%s", stdout=sp.PIPE) % file
+    return out.stdout
 
 
 @app.route('/index.html')
