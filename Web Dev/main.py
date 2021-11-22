@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 app = Flask(__name__)
 
@@ -21,19 +21,21 @@ def cafe():
     return render_template('index-1.html')
 
 
-@app.route('/css/<file>')
-def css_route(file):
-    return render_template('css/%s' % file)
+# @app.route('/css/<file>')
+# def css_route(file):
+#     return render_template('css/%s' % file)
+# Dome wrong way
 
 
 @app.route('/images/<file>')
 def images_route(file):
-    return render_template('images/%s' % file)
+    return send_file('templates/images/%s' % file)
 
 
-@app.route('/js/<file>')
-def js_route(file):
-    return render_template('js/%s' % file)
+# @app.route('/js/<file>')
+# def js_route(file):
+#     return render_template('js/%s' % file)
+# Dome Wrong way
 
 
 @app.route('/bat/<file>')
@@ -42,4 +44,4 @@ def bat_route(file):
 
 
 if '__name__' == '__main__':
-    app.run(debug=True)
+    app.run()
