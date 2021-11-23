@@ -10,8 +10,8 @@ opts.add_argument("--headless")
 
 firefox_instance = webdriver.Firefox(options=opts, service=ser)
 
-firefox_instance.maximize_window()
-# -> Actually it is not required as firefox runs by default in maximize window mode but others do not
+# firefox_instance.maximize_window()
+# -> Actually it is not required as firefox runs by default in maximize window mode but others do not and totally useless of ypu are running browser headless
 firefox_instance.get(
     "https://demo.seleniumeasy.com/basic-first-form-demo.html")
 
@@ -36,4 +36,9 @@ assert message in output_message.get_attribute('innerHTML')
 
 firefox_instance.close()
 firefox_instance.close()
-# Sometimes you are required to close it twice because it would not work for first time
+# Sometimes you are required to close it twice because it might not work for first time for some weird bugs
+# firefox_instance.quit() would close all the instanced opened in the window but some bug can happen
+firefox_instance.quit()
+'''
+we can add delay between our actions to make them look more human like so that our test might fail because of nit detection
+'''
