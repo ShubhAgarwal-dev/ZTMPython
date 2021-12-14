@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Victor Mono','Source Code Pro Medium',Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'Source Code Pro',Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "cSpell.customDictionaries": {
         "custom-dictionary-workspace": {
