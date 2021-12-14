@@ -1,0 +1,1 @@
+password2 was just made to be a redundant password file as the program clears the reading file at last

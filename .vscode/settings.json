@@ -1,6 +1,9 @@
 {
     "editor.fontFamily": "'Source Code Pro',Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontFamily": "Cascadia Code",
+    "terminal.integrated.fontSize": 13,
     "cSpell.customDictionaries": {
         "custom-dictionary-workspace": {
             "name": "custom-dictionary-workspace",
