@@ -1,3 +1,8 @@
+# Work left:
+# -> to make the count_key-addition function work
+# ->to have a option to clear the file read for password
+# ->to improve the code redability
+
 import requests
 from hashlib import sha1
 
@@ -39,10 +44,11 @@ def request_api_data(first5_hashed_char_list: list):
 
 
 def count_key_addition(hashed_password_dict: dict, responce_dict: dict):
+    # Required to ask to seniors about why I am  getting this error
     hashed_password_dict['count'] = []
     for i in range(len(responce_dict)):
         hashes_returned = responce_dict[hashed_password_dict['first5_char_list'][i]]
-        hashes = (line.split(':') for line in hashes_returned.splitlines())
+        hashes = (line.split(':') for line in hashes_returned.text.splitlines())
         for hash, count in hashes:
             if hash.upper() == hashed_password_dict['tail_list'][i].upper():
                 print(count)
