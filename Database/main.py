@@ -4,10 +4,11 @@ import sqlite3
 class DatabaseManipulation():
     def __init__(self, database_path='cinema.db') -> None:
         self._filepath = database_path
-        self.create_table()
+        self.create_table(self._filepath)
 
-    def create_table(self):
-        connection = sqlite3.connect(self._filepath)
+    @staticmethod
+    def create_table(database_path):
+        connection = sqlite3.connect(database_path)
         connection.execute("""
             CREATE TABLE "Seat"(
                 "seat_id" TEXT,
@@ -56,3 +57,14 @@ class DatabaseManipulation():
         connection.commit()
         connection.close()
         return None
+
+
+if __name__ == '__main__':
+    db = DatabaseManipulation()
+    db.add_record("A1", True, 200)
+    db.add_record("A2", False, 300)
+    db.add_record("A3", False, 400)
+    db.add_record("A4", True, 310)
+    print(db.select_all())
+    db.update_seat_taken("A2")
+    db.delete_seat("A4")
